@@ -39,6 +39,13 @@ function addTask() {
         }
     })
 
+    deleteBtn.addEventListener("click", function () {
+        if(confirm("Are you sure you want to delete this task?")){
+            listContainer.removeChild(li);
+            updateCounters();
+        }
+    });
+
     listContainer.appendChild(li);
     inputBox.value = "";
     updateCounters();
